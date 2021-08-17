@@ -1,7 +1,12 @@
-{{page-title "PeekPerformance"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<h1>Peek Calendar</h1>
+<br>
+{{#each this.dates as |date|}}
+  <div>
+    {{#link-to 'date' date}}
+      {{date}}
+    {{/link-to}}
+  </div>
+{{/each}}
+<br>
+<br>
 {{outlet}}
