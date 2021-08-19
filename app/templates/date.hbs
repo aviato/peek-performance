@@ -1,4 +1,24 @@
 {{page-title "Date"}}
 
+<style>
+  {{#each this.hours as |hour|}}
+    .hour-{{hour.hourNumber}}::before {
+      content: '{{hour.formattedTime}}'
+    }
+  {{/each}}
+</style>
+
 <!-- Replace this with your date view -->
 <div>Number of timeslots: {{this.model.length}}</div>
+
+<div class="container">
+  {{#each this.hours as |hour|}}
+    <div class='hour hour-{{hour.hourNumber}}'>
+        {{#each @model as |date|}}
+          {{#if (eq hour.formattedTime date.startTime)}}
+           <div class="day">{{date.activityName}}</div>
+          {{/if}}
+        {{/each}}
+    </div>
+  {{/each}}
+</div>

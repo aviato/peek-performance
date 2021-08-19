@@ -1,5 +1,44 @@
 body {
-  margin: 12px 16px;
+  margin: 12px 24px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12pt;
+}
+
+.container {
+  padding: 40px;
+}
+
+.hour {
+  position: relative;
+  height: 60px;
+  /* background-color: tomato; */
+  border: 1px solid navy;
+  /* This is probably lazy */
+  border-top: none; 
+
+}
+
+.hour:first-of-type {
+  border-top: 1px solid navy;
+}
+
+.hour::before {
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: 20px;
+  content: '';
+  text-align: left;
+}
+
+.day {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
