@@ -36,9 +36,14 @@ body {
   top: 0;
   left: 0;
   height: 60px;
-  width: 100px;
+  width: 100%;
   background-color: tomato;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.activity-name {
+  font-weight: 700;
+  margin-right: 12px;
 }

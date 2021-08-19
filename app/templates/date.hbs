@@ -16,7 +16,11 @@
     <div class='hour hour-{{hour.hourNumber}}'>
         {{#each @model as |date|}}
           {{#if (eq hour.formattedTime date.startTime)}}
-           <div class="day">{{date.activityName}}</div>
+           <div class="day">
+              <span class="activity-name">{{date.activityName}}</span>
+              <span>{{date.startTime}} - {{date.endTime}}</span>
+
+            </div>
           {{/if}}
         {{/each}}
     </div>
