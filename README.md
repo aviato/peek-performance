@@ -1,7 +1,6 @@
 # peek-performance
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+I decided to give this coding challenge a shot using Ember, but I ended up running out of time. It was fun!
 
 ## Prerequisites
 
